@@ -5,7 +5,7 @@ const TrendingNFT = () => {
     <>
     <div className="bfooter">
        <h3>
-       Copyright © 2022 Blue Sapphire. All Rights Reserved.
+       Copyright © 2023 Blue Sapphire. All Rights Reserved.
         </h3> 
     </div>
     

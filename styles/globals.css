@@ -54,8 +54,8 @@ h2,h1,h3{
 }
 
 .logoimg11{
-  width: 120px;
-  height: 120px;
+  width: 320px;
+  height: 320px;
 }
 @media (max-width:600px){
   .css-n15nnd{
@@ -77,7 +77,7 @@ h2,h1,h3{
 }
 
 .footer .column {
-  width: 25%;
+  width: 33%;
   float: left;
   padding: 0 20px;
 }
@@ -102,7 +102,7 @@ h2,h1,h3{
 
 .footer .column:nth-child(1){
   /* float: right; */
-  text-align: -webkit-right;
+  /* text-align: -webkit-right; */
 }
 .social-icons{
   display: flex;
@@ -132,7 +132,7 @@ h2,h1,h3{
 }
 
 .css-1hyinb4{
-  border-bottom: 2px solid #2d2d53!important;
+  /* border-bottom: 2px solid #2d2d53!important; */
 }
 
 .cw{
@@ -166,3 +166,38 @@ margin-top: 10px;
   margin-top: 3rem;
  }
 }
+
+nav a{
+  font-weight: bold;
+}
+
+@media (min-width:600px){
+  nav{
+    position: absolute;
+    right: 20rem;
+  }
+  .myclass{
+    right: 27rem;
+  }
+  .cbtn{
+    margin-right: 9rem;
+  }
+  .logoimg {
+    width: 62px;
+    height: 67px;
+    margin-left: 4rem;
+}
+
+.logoimg11{
+  width: 110px;
+  height: 110px;
+}
+}/* styles/index.module.css */
+
+.centered {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+ margin-top: 2rem;
+}
+

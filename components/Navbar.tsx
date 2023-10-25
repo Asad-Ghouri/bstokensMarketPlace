@@ -66,12 +66,13 @@ export  function Navbar() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>
-              <Stack display={{ base: 'none',md:"block" }}> <img src="https://sheikhstudios.live/images/BST-NEW-LOGO.png" className='logoimg' alt="" /> </Stack>
+              <Stack display={{ base: 'none',md:"block" }}> <img src="https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/logo-1-1.png" className='logoimg' alt="" /> </Stack>
             </Box>
-            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+            <HStack as={'nav'} spacing={4}  className={address?"myclass":"aas"} display={{ base: 'none', md: 'flex' }}>
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
+              <a href="https://sheikhstudios.live/bs_tokens/">Home</a>
               <Link as={NextLink} href='/buy' mx={2.5}>
                          <Text>Buy</Text>
                      </Link>
@@ -81,9 +82,12 @@ export  function Navbar() {
                     <Link as={NextLink} href='/stake' mx={2.5}>
                          <Text>Stake</Text>
                     </Link>
+                    <Link as={NextLink} href='/wallet' mx={2.5}>
+                         <Text>Wallet</Text>
+                    </Link>
             </HStack>
           </HStack>
-          <Flex dir={"row"} alignItems={"center"}>
+          <Flex dir={"row"} alignItems={"center"} className='cbtn'>
                     <Stack display={{ base: 'none',md:"block" }}> <ConnectWallet /> </Stack> 
                      {address && (
                          <Link as={NextLink} href={`/profile/${address}`}>
@@ -99,6 +103,7 @@ export  function Navbar() {
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
+               <a href="https://sheikhstudios.live/bs_tokens/">Home</a>
               <Link as={NextLink} href='/buy' mx={2.5}>
                          <Text>Buy</Text>
                      </Link>
@@ -107,6 +112,9 @@ export  function Navbar() {
                     </Link>
                     <Link as={NextLink} href='/stake' mx={2.5}>
                          <Text>Stake</Text>
+                    </Link>
+                    <Link as={NextLink} href='/wallet' mx={2.5}>
+                         <Text>Wallet</Text>
                     </Link>
                     <ConnectWallet />
             </Stack>

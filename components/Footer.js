@@ -6,15 +6,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="column">
         {/* Column 1: Logo */}
-        <img src="https://sheikhstudios.live/images/BST-NEW-LOGO.png" className='logoimg logoimg11' alt="" />
+        <img src="https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-23-at-09.59-1.png" className='logoimg logoimg11' alt="" />
       </div>
-      <div className="column">
-        {/* Column 2: Text */}
-        <h2>About Us</h2>
-        <p>
-          Bst Project is based on Bracelet having stones Neodymium, Blue Sapphire, Titanium, Far Infrared, and Germanium which helps in keeping the radiations away.
-        </p>
-      </div>
+     
       <div className="column">
         {/* Column 3: Office Address */}
         <h2>Office Address</h2>

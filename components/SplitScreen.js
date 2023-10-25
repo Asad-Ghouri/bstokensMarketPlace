@@ -45,7 +45,7 @@ export default function SplitScreen() {
             Blockchain technology makes this new approach to digital ownership 
             possible.
           </Text>
-          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+          {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <Button
               rounded={'full'}
               bg={'blue.400'}
@@ -56,7 +56,7 @@ export default function SplitScreen() {
               Explore
             </Button>
             <Button rounded={'full'}>How It Works</Button>
-          </Stack>
+          </Stack> */}
         </Stack>
       </Flex>
       <Flex flex={1}>
