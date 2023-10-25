@@ -99,7 +99,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                         <Text fontWeight={"bold"} className="cw" >Description:</Text>
                         <Text>{nft.metadata.description}</Text>
                     </Box>
-                    <Box>
+                    {/* <Box>
                         <Text fontWeight={"bold"} className="cw">Traits:</Text>
                         <SimpleGrid columns={2} spacing={4}>
                         {Object.entries(nft?.metadata?.attributes || {}).map(
@@ -111,7 +111,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                         )
                         )}
                         </SimpleGrid>
-                    </Box>
+                    </Box> */}
                 </Stack>
                 
                 <Stack spacing={"20px"}>

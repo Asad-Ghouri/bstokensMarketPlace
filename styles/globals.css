@@ -150,3 +150,19 @@ margin-top: 10px;
   height: 340px;
   border-radius: 4px;
 }
+
+@media (max-width:600px){
+  .spashimg {
+    width: 100%;
+  }
+  .flex img {
+    height: 167px;
+    border-radius: 4px;
+}
+.footer .column {
+  width: 50%;
+ }
+ .footer .column:nth-child(3),.footer .column:nth-child(4){
+  margin-top: 3rem;
+ }
+}
