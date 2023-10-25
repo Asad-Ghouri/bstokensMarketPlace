@@ -143,11 +143,11 @@ h2,h1,h3{
 display: flex;
 gap: 1rem;
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: space-around;
 margin-top: 10px;
 }
 .flex img{
-  height: 340px;
+  height: 300px;
   border-radius: 4px;
 }
 
