@@ -15,8 +15,8 @@ const wallet: NextPage = () => {
             title="External Page"
             frameBorder="0"
           ></iframe>
+        {/* <Footer /> */}
         </div>
-        <Footer />
 
         </div>
       {/* <div className="sf"> <BFooter /></div> */}
