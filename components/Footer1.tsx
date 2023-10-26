@@ -3,9 +3,9 @@ import { Flex, Grid, GridItem, Box, Text, Icon } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { FaTwitter, FaFacebook, FaInstagram,  FaLinkedin, FaGithub } from "react-icons/fa";
 
-const Footer = () => {
+const Footer1 = () => {
   return (
-    <Box as="footer" p={4} className="c-footer s-footer">
+    <Box as="footer" p={4} className="c-footer">
       <Grid templateColumns="repeat(3, 1fr)" gap={4}>
         {/* Column 1 - Logo */}
         <GridItem colSpan={1}>
@@ -66,4 +66,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer1;

@@ -7,7 +7,7 @@ import NFTGrid from "../components/NFTGrid";
 import SaleInfo from "../components/SaleInfo";
 
 
-import Footer from "../components/Footer"
+import Footer1 from "../components/Footer1"
 import BFooter from "../components/BFooter"
 
 export default function Sell() {
@@ -58,9 +58,12 @@ export default function Sell() {
                 </Flex>
             )}
         </Container>
-        
-         {/* <Footer />
-        <BFooter /> */}
+        <br />
+        <br />
+        <br />
+        <div className="sellfooter"> <Footer1 /></div>
+        <BFooter />
+         
         </>
     )
 }

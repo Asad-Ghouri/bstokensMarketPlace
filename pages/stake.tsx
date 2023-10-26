@@ -19,7 +19,9 @@ import {
   } from "../const/contractAddresses";
   import styles from "../styles/stake.module.css";
   
-  import Footer from "../components/Footer"
+import {Box} from "@chakra-ui/react";
+
+  import Footer1 from "../components/Footer1"
 import BFooter from "../components/BFooter"
 
   const Stake: NextPage = () => {
@@ -69,6 +71,7 @@ import BFooter from "../components/BFooter"
     }
   
     return (
+      <>
       <div className={styles.container}>
         <h1 className={styles.h1}>Stake Your NFTs</h1>
         <hr className={`${styles.divider} ${styles.spacerTop}`} />
@@ -142,9 +145,14 @@ import BFooter from "../components/BFooter"
         <br />
         <br />
 
-            <Footer />
-      <div className="sf"> <BFooter /></div>
+      {/* <div className="sf"> <BFooter /></div> */}
+           {/* <div className="stakefooter">  */}
+          <Box className="s-ff">  <Footer1 />  </Box>
+          <BFooter />
+            {/* </div> */}
       </div>
+      
+      </>
     );
   };
   

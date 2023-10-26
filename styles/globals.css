@@ -6,13 +6,21 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-image: url(https://itishstudios.net/assert/bg.jpg)!important;
+    /* background-image: url(https://itishstudios.net/assert/bg.jpg)!important; */
     color: white!important;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     font-family: 'Josefin Sans', sans-serif!important;
+    background-color: #000000;
+    background-image: url(https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/Group-919-scaled.jpg)!important;
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    /* overflow-x: hidden!important; */
 }
 
+.sellfooter{
+    overflow-x: hidden!important;
+}
 a {
   color: #7dd3fc;
   text-decoration: none;
@@ -169,15 +177,20 @@ margin-top: 10px;
 
 nav a{
   font-weight: bold;
+  color: #7a7a7a;
 }
 
+nav a p{
+  font-weight: bold;
+  color: #7a7a7a;
+}
 @media (min-width:600px){
   nav{
     position: absolute;
     right: 20rem;
   }
   .myclass{
-    right: 27rem;
+    right: 28rem;
   }
   .cbtn{
     margin-right: 9rem;
@@ -201,3 +214,38 @@ nav a{
  margin-top: 2rem;
 }
 
+.bs{
+  color: #6EC1E4;
+    font-weight: bolder;
+}
+
+.c-footer{
+  background-color: #0F1869;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.cw p{
+  color: white!important;
+}
+@media(min-width:600px){
+  .c-footer{
+    padding: 63px!important;
+    margin-left: -3%!important;
+    width: 104%!important;
+    padding-top: 117px!important;
+    padding-bottom: 110px!important;
+    
+  }
+  .c-footer div{
+    justify-items: center;
+  }
+  .s-footer{
+    margin-left: 0%!important;
+  }
+  .s-ff{
+    margin-left: -3%;
+    width: 106.2%;
+    overflow-x: hidden!important;
+  }
+}

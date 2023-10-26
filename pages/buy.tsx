@@ -5,7 +5,7 @@ import { NFT_COLLECTION_ADDRESS } from "../const/addresses";
 import { useContract, useNFTs } from "@thirdweb-dev/react";
 
 
-import Footer from "../components/Footer"
+import Footer1 from "../components/Footer1"
 import BFooter from "../components/BFooter"
 
 import SplitScreen from "../components/SplitScreen"
@@ -33,7 +33,7 @@ export default function Buy() {
                 data={data} 
                 emptyText={"No NFTs found"}
             /> */}
-           <Stack mt={20}> <Footer  /> </Stack> 
+           <Stack mt={20}> <Footer1  /> </Stack> 
         <BFooter />
         </Container>
     )

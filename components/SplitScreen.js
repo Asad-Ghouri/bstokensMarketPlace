@@ -19,7 +19,7 @@ export default function SplitScreen() {
     <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
-          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} className='bs'>
             <Text
               as={'span'}
               position={'relative'}
@@ -33,17 +33,18 @@ export default function SplitScreen() {
                 bg: 'blue.400',
                 zIndex: -1,
               }}>
-              Discover Find
+           
+BLUE SAPPHIRE
             </Text>
             <br />{' '}
-            <Text color={'blue.400'} as={'span'}>
+            {/* <Text color={'blue.400'} as={'span'}>
              and Sell NFTS
-            </Text>{' '}
+            </Text>{' '} */}
           </Heading>
-          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            Every Digital artwork on upside is authentic and truely unique.
-            Blockchain technology makes this new approach to digital ownership 
-            possible.
+          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white.500'}>
+          Bst Project is based on Bracelet having stones Neodymium,
+          Blue Sapphire, Titanium, Far Infrared, and Germanium which 
+          helps in keeping the radiations away
           </Text>
           {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <Button
