@@ -12,6 +12,9 @@ import {
 import Image from 'next/image';
 
 
+import {
+  Link
+  } from '@chakra-ui/react'
 import Nft from "../public/nft.jpeg";
 
 export default function SplitScreen() {
@@ -55,7 +58,7 @@ export default function SplitScreen() {
               _hover={{
                 bg: 'blue.500',
               }}>
-              Buy Now
+          <Link href='./#dnft'>  Buy Now </Link>
             </Button>
             {/* <Button rounded={'full'}>How It Works</Button> */}
           </Stack>

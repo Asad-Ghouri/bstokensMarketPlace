@@ -12,7 +12,7 @@ body {
     /* background-size: cover; */
     font-family: 'Josefin Sans', sans-serif!important;
     background-color: #000000;
-    background-image: url(https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/Group-919-scaled.jpg)!important;
+    background-image: url(../public/bg.jpg)!important;
     background-repeat: no-repeat;
     background-size: cover!important;
     /* overflow-x: hidden!important; */
@@ -133,6 +133,7 @@ h2,h1,h3{
   height: 80%;
   margin-top: 3rem;
   width: 75%;
+  object-fit: cover;
 }
 
 .css-19isl6w{
@@ -201,10 +202,10 @@ nav a p{
     margin-left: 4rem;
 }
 
-.logoimg11{
+/* .logoimg11{
   width: 110px;
   height: 110px;
-}
+} */
 }/* styles/index.module.css */
 
 .centered {
@@ -215,14 +216,14 @@ nav a p{
 }
 
 .bs{
-  color: #0036A0;
+  color: white;
     font-weight: bolder;
 }
 
 .c-footer{
   background-color: #0F1869;
-    opacity: 0.5;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    /* opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
 }
 
 .cw p{

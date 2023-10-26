@@ -1,7 +1,11 @@
 import { Flex, Grid, GridItem, Box, Text, Icon } from "@chakra-ui/react";
 
 import { EmailIcon } from "@chakra-ui/icons";
-import { FaTwitter, FaFacebook, FaInstagram,  FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaInstagram,  FaLinkedin, FaGithub ,
+  FaPinterest,
+  FaYoutube,
+  FaSnapchat,
+  FaTumblr,} from "react-icons/fa";
 
 const Footer1 = () => {
   return (
@@ -9,7 +13,7 @@ const Footer1 = () => {
       <Grid templateColumns="repeat(3, 1fr)" gap={4} className="footergrid">
         {/* Column 1 - Logo */}
         <GridItem colSpan={1}>
-        <img src="https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-23-at-09.59-1.png" className='logoimg logoimg11' alt="" />
+        <img src="https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/logo-1-1.png" className='logoimg logoimg11' alt="" />
         </GridItem>
 
         {/* Column 2 - Office Address */}
@@ -24,10 +28,7 @@ const Footer1 = () => {
           Bank Street
           </Text>
           <Text>
-          Business Atrium Centre
-          </Text>
-          <Text>
-          Khalid bin Waleed Road
+          Business Atrium Centre Khalid bin Waleed Road
           </Text>
           <Text>
           Bur Dubai. Office No. 310
@@ -56,6 +57,18 @@ const Footer1 = () => {
       </Box>
       <Box ml={2}> {/* Add margin to this box */}
         <FaGithub size={20} color="white" />
+      </Box>
+      <Box ml={2}>
+        <FaPinterest size={20} color="white" />
+      </Box>
+      <Box ml={2}>
+        <FaYoutube size={20} color="white" />
+      </Box>
+      <Box ml={2}>
+        <FaSnapchat size={20} color="white" />
+      </Box>
+      <Box ml={2}>
+        <FaTumblr size={20} color="white" />
       </Box>
     </Flex>
   </Flex>

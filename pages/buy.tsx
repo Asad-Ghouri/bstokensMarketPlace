@@ -26,7 +26,7 @@ export default function Buy() {
                 <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft.25558b8c.jpeg&w=1080&q=75" alt="" />
                 <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft.25558b8c.jpeg&w=1080&q=75" alt="" />
             </div>
-            <Heading mt={14}>Discover NFTs</Heading>
+            <Heading mt={14} id="dnft">Discover NFTs</Heading>
             <Text>Browse and buy NFTs from this collection.</Text>
             {/* <NFTGrid 
                 isLoading={isLoading} 
