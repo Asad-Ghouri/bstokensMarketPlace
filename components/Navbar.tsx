@@ -66,7 +66,7 @@ export  function Navbar() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>
-              <Stack display={{ base: 'none',md:"block" }}> <img src="https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/logo-1-1.png" className='logoimg' alt="" /> </Stack>
+              <Stack display={{ base: 'none',md:"block" }}> <img src="https://chrome-extension-zeta-seven.vercel.app/static/media/c192.a40001fb23973e3b1257.png" className='logoimg' alt="" /> </Stack>
             </Box>
             <HStack as={'nav'} spacing={4}  className={address?"myclass":"aas"} display={{ base: 'none', md: 'flex' }}>
               {/* {Links.map((link) => (
