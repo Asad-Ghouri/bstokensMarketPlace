@@ -6,7 +6,7 @@ import { FaTwitter, FaFacebook, FaInstagram,  FaLinkedin, FaGithub } from "react
 const Footer1 = () => {
   return (
     <Box as="footer" p={4} className="c-footer">
-      <Grid templateColumns="repeat(3, 1fr)" gap={4}>
+      <Grid templateColumns="repeat(3, 1fr)" gap={4} className="footergrid">
         {/* Column 1 - Logo */}
         <GridItem colSpan={1}>
         <img src="https://sheikhstudios.live/bs_tokens/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-23-at-09.59-1.png" className='logoimg logoimg11' alt="" />

@@ -34,7 +34,7 @@ export default function SplitScreen() {
                 zIndex: -1,
               }}>
            
-BLUE SAPPHIRE
+           Bstoken NFT
             </Text>
             <br />{' '}
             {/* <Text color={'blue.400'} as={'span'}>
@@ -46,18 +46,19 @@ BLUE SAPPHIRE
           Blue Sapphire, Titanium, Far Infrared, and Germanium which 
           helps in keeping the radiations away
           </Text>
-          {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <Button
-              rounded={'full'}
-              bg={'blue.400'}
+              rounded={''}
+              bg={''}
+              className='bn'
               color={'white'}
               _hover={{
                 bg: 'blue.500',
               }}>
-              Explore
+              Buy Now
             </Button>
-            <Button rounded={'full'}>How It Works</Button>
-          </Stack> */}
+            {/* <Button rounded={'full'}>How It Works</Button> */}
+          </Stack>
         </Stack>
       </Flex>
       <Flex flex={1}>

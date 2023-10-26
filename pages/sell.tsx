@@ -5,6 +5,10 @@ import { NFT_COLLECTION_ADDRESS } from "../const/addresses";
 import type { NFT as NFTType } from "@thirdweb-dev/sdk";
 import NFTGrid from "../components/NFTGrid";
 import SaleInfo from "../components/SaleInfo";
+import {
+    ConnectWallet,
+    Web3Button,
+  } from "@thirdweb-dev/react";
 
 
 import Footer1 from "../components/Footer1"
@@ -19,7 +23,18 @@ export default function Sell() {
 
     return (
         <>
-        <Container maxW={"1200px"} p={5}>
+
+{
+    !address ? (
+        <>
+        <div className="scw">
+            <h2>Connect Your Wallet</h2>
+        </div>
+        <div className="scbtn"> <ConnectWallet /></div>
+        </>
+      ) : 
+      <>
+        <Container maxW={"1200px"} p={5} className="sellcontainer">
             <Heading mt={20}>Sell NFTs</Heading>
             <Text>Select which NFT to sell below.</Text>
             {!selectedNFT ? (
@@ -63,6 +78,8 @@ export default function Sell() {
         <br />
         <div className="sellfooter"> <Footer1 /></div>
         <BFooter />
+      </>
+}
          
         </>
     )

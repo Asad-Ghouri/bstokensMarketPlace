@@ -215,7 +215,7 @@ nav a p{
 }
 
 .bs{
-  color: #6EC1E4;
+  color: #0036A0;
     font-weight: bolder;
 }
 
@@ -228,13 +228,39 @@ nav a p{
 .cw p{
   color: white!important;
 }
+
+.scw{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.scw h2{
+  font-size: 34px;
+}
+.scbtn{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.scbtn button{
+  background-color: transparent;
+  background-image: linear-gradient(258deg, #5D09D1FC 0%, #220B4D 100%);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 2px;
+}
 @media(min-width:600px){
   .c-footer{
     padding: 63px!important;
-    margin-left: -3%!important;
+    margin-left: -2.6%!important;
     width: 104%!important;
     padding-top: 117px!important;
     padding-bottom: 110px!important;
+    
     
   }
   .c-footer div{
@@ -248,4 +274,42 @@ nav a p{
     width: 106.2%;
     overflow-x: hidden!important;
   }
+  .wff{
+    overflow-x: hidden!important;
+
+  }
+  .sellcontainer , .profilecontainer{
+    padding-left: 5rem!important;
+  }
+}
+
+.bn{
+  background-color: transparent;
+    background-image: linear-gradient(258deg, #5D09D1FC 0%, #220B4D 100%);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 2px;
+}
+@media(max-width:600px){
+  .c-footer {
+    width: 112%;
+    margin-left: -6%;
+    overflow-x: hidden!important;
+}
+.logoimg11 {
+  width: 120px;
+  height: 120px;
+}
+.footergrid div {
+  grid-column: 1;
+  width: 127%;
+}
+.sellfooter {
+   padding-left: 5%;
+}
+.wff{
+  margin-left: 0%;
+  overflow: hidden;
+  padding-left: 6%;
+}
 }
