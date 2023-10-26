@@ -20,21 +20,26 @@ export default function Buy() {
            
             <SplitScreen />
             <Heading mt={24}>Trending NFTs</Heading>
-            <div className="flex">
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-            </div>
-            <Heading mt={14} id="dnft">Discover NFTs</Heading>
-            <Text>Browse and buy NFTs from this collection.</Text>
-            <Heading mt={5}>Hold On Nft coming soon</Heading>
-           
-            {/* <NFTGrid 
+            <NFTGrid 
                 isLoading={isLoading} 
                 data={data} 
                 emptyText={"No NFTs found"}
-            /> */}
+            />
+            {/* <div className="flex">
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
+            </div> */}
+            <Heading mt={14} id="dnft">Discover NFTs</Heading>
+            <Text>Browse and buy NFTs from this collection.</Text>
+            {/* <Heading mt={5}>Hold On Nft coming soon</Heading> */}
+           
+            <NFTGrid 
+                isLoading={isLoading} 
+                data={data} 
+                emptyText={"No NFTs found"}
+            />
            <Stack mt={20}> <Footer1  /> </Stack> 
         <BFooter />
         </Container>
