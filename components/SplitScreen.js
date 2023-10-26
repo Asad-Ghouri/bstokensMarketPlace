@@ -67,7 +67,6 @@ export default function SplitScreen() {
       <Flex flex={1}>
         <Image
           alt={'Login Image'}
-        //   objectFit={'cover'}
           className='spashimg'
           src={Nft}
         />

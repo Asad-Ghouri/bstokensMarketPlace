@@ -21,13 +21,15 @@ export default function Buy() {
             <SplitScreen />
             <Heading mt={24}>Trending NFTs</Heading>
             <div className="flex">
-                <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft.25558b8c.jpeg&w=1080&q=75" alt="" />
-                <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft.25558b8c.jpeg&w=1080&q=75" alt="" />
-                <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft.25558b8c.jpeg&w=1080&q=75" alt="" />
-                <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft.25558b8c.jpeg&w=1080&q=75" alt="" />
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
+                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
             </div>
             <Heading mt={14} id="dnft">Discover NFTs</Heading>
             <Text>Browse and buy NFTs from this collection.</Text>
+            <Heading mt={5}>Hold On Nft coming soon</Heading>
+           
             {/* <NFTGrid 
                 isLoading={isLoading} 
                 data={data} 
