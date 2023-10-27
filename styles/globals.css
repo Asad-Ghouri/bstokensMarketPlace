@@ -197,9 +197,10 @@ nav a p{
     margin-right: 9rem;
   }
   .logoimg {
-    width: 85px;
-    height: 85px;
+    width: 113px;
+    height: 117px;
     margin-left: 4rem;
+    margin-top: 32px;
 }
 
 /* .logoimg11{
@@ -326,4 +327,48 @@ nav a p{
 .logoimg11{
   height: 120px;
   width: 120px;
+}
+
+
+
+.hero {
+  position: relative; /* Ensure positioning context */
+ 
+  overflow: hidden; /* Hide the overflowing part of the image */
+}
+
+.animated-image {
+  position: absolute;
+  top: 0;
+  left: 0; /* Starting position of the image */
+
+  /* Set your image's width and height here */
+
+  animation: moveLeft 5s linear infinite; /* Adjust duration and animation name as needed */
+}
+
+@keyframes moveLeft {
+  0% {
+      left: 0; /* Start position */
+  }
+  100% {
+      left: -20%; /* Move left by 100% of image width */
+  }
+}
+
+
+.animated-text {
+  animation: fadeIn 8s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

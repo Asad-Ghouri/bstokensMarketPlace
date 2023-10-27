@@ -15,13 +15,13 @@ import Image from 'next/image';
 import {
   Link
   } from '@chakra-ui/react'
-import Nft from "../public/nft.jpeg";
+import Nft from "../public/banner1.png"
 
 export default function SplitScreen() {
   return (
     <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
-        <Stack spacing={6} w={'full'} maxW={'lg'}>
+        <Stack spacing={6} w={'full'} maxW={'lg'} className='animated-text'>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} className='bs'>
             <Text
               as={'span'}
@@ -64,10 +64,10 @@ export default function SplitScreen() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex flex={1}>
+      <Flex flex={1} className='hero'>
         <Image
           alt={'Login Image'}
-          className='spashimg'
+          className='spashimg animated-image'
           src={Nft}
         />
       </Flex>
