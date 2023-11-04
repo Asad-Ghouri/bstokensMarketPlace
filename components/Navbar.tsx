@@ -72,7 +72,7 @@ export  function Navbar() {
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
-              <a href="https://sheikhstudios.live/bs_tokens/">Home</a>
+              <a href="https://itishstudios.net/sheikh/">Home</a>
               <Link as={NextLink} href='/buy' mx={2.5}>
                          <Text>Buy</Text>
                      </Link>
@@ -103,7 +103,7 @@ export  function Navbar() {
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
-               <a href="https://sheikhstudios.live/bs_tokens/">Home</a>
+               <a href="https://itishstudios.net/sheikh/">Home</a>
               <Link as={NextLink} href='/buy' mx={2.5}>
                          <Text>Buy</Text>
                      </Link>
