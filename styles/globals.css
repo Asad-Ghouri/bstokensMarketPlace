@@ -383,24 +383,36 @@ nav a p{
 }
 
 .splitContainer{
+display: flex;
+align-items: center;
+gap: 3rem;
+margin-top: 5rem;
+padding-left: 9rem;
 }
+
 .dflex{
   display: flex;
   /* flex-wrap: wrap; */
   align-items: center;
-  justify-content: space-between;
-  margin-top: 6rem;
+  justify-content: normal;
+  margin-top: 0rem;
   background-image: url(../public/bb.png);
-overflow-x: hidden;
-margin-left: -2rem;
-margin-right: -1.2rem;
-  padding-left: 16rem;
-  padding-top: 7rem;
-  padding-bottom: 6rem;
+  /* overflow-x: hidden; */
+  margin-left: 0rem;
+  margin-right: 0rem;
+  padding-left: 4rem;
+  /* gap: 2rem; */
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+
+  background-position: center;
+
+    background-size: cover;
 }
 .scontent{
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .imflex{
@@ -413,8 +425,15 @@ margin-right: -1.2rem;
   font-weight: bold;
   padding-bottom: 3rem;
   padding-top: 12px;
+  width: 249%;
 }
-
+.BST{
+  font-size: 29px;
+  font-weight: bold;
+  padding-bottom:1rem;
+  padding-top: 12px;
+  
+}
 .gerimg{
   margin-left: -8px;
 }
@@ -426,11 +445,23 @@ margin-right: -1.2rem;
 .img img{
   width: 55%;
 }
+
+.image{
+  text-align: -webkit-center;
+}
+
 .image img{
-  width: 50%;
+  width: 70%;
   margin-top: 3rem;
 }
 
+.ttext{
+margin-left: 2rem;
+}
+.ttext h3{
+  width: 51%;
+  text-align: justify;
+}
 @media (max-width:600px){
   .dflex{
     margin-left: -57px;
@@ -440,4 +471,19 @@ margin-right: -1.2rem;
   .image img{
     width: 68%;
   }
+  .splitContainer{
+    flex-wrap: wrap;
+    gap: 0;
+    padding-left: 54px;
+  }
+  .sheading{
+    width: 98%;
+  }
+  .ttext {
+    margin-left: -3rem;
+}
+.ttext h3 {
+  width: 81%;
+  text-align: justify;
+}
 }
