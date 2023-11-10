@@ -8,8 +8,10 @@ import {
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react'
+import NextLink from 'next/link';
 
 import Image from 'next/image';
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 
 
 import {
@@ -24,11 +26,13 @@ import {
 // import image7 from "../public/banner/7.png"
 
 export default function SplitScreen() {
+  const address = useAddress();
+
   return (
     <>
     <div className="splitpage">
       <div className="splitContainer">
-        <div className="dflex">
+        {/* <div className="dflex">
           <div className="scontent animated-text">
              <h1 className="sheading">
                 Bstoken Braclet Composition
@@ -99,7 +103,13 @@ export default function SplitScreen() {
           <img src="https://itishstudios.net/assert/public/2.png" alt="" />    
 
           </div>
-        </div>
+        </div> */}
+        <div className="video-container">
+      <video width="100%" controls loop>
+        <source src="https://itishstudios.net/assert/bs.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
         <div className="ttext">
            <h1 className="BST">
             BSToken NFT
@@ -107,62 +117,19 @@ export default function SplitScreen() {
            <h3>
             This groundbreaking innovation is founded on original bracelet adorned with exquisite gematones a resilient titanium body , resulting in a perfect blend, particularly suited for the metaverce
            </h3>
+           <Flex dir={"row"} alignItems={"center"} className='cbtn'>
+                    <Stack display={{ base: 'none',md:"block" }}>  </Stack> 
+                     {address && (
+                         <Link as={NextLink} href={`/profile/${address}`}>
+                           <button className='custom-button'></button>
+                         </Link>
+                     )}
+             </Flex>
         </div>
       </div>
     </div>
+    
     </>
   )
 }
-    // <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-    //   <Flex p={8} flex={1} align={'center'} justify={'center'}>
-    //     <Stack spacing={6} w={'full'} maxW={'lg'} className='animated-text'>
-    //       <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} className='bs'>
-    //         <Text
-    //           as={'span'}
-    //           position={'relative'}
-    //           _after={{
-    //             content: "''",
-    //             width: 'full',
-    //             height: useBreakpointValue({ base: '20%', md: '30%' }),
-    //             position: 'absolute',
-    //             bottom: 1,
-    //             left: 0,
-    //             bg: 'blue.400',
-    //             zIndex: -1,
-    //           }}>
-           
-    //        Bstoken NFT
-    //         </Text>
-    //         <br />{' '}
-    //         {/* <Text color={'blue.400'} as={'span'}>
-    //          and Sell NFTS
-    //         </Text>{' '} */}
-    //       </Heading>
-    //       <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white.500'}>
-    //       Bst Project is based on Bracelet having stones Neodymium,
-    //       Blue Sapphire, Titanium, Far Infrared, and Germanium which 
-    //       helps in keeping the radiations away
-    //       </Text>
-    //       <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-    //         <Button
-    //           rounded={''}
-    //           bg={''}
-    //           className='bn'
-    //           color={'white'}
-    //           _hover={{
-    //             bg: 'blue.500',
-    //           }}>
-    //       <Link href='./#dnft'>  Buy Now </Link>
-    //         </Button>
-    //         {/* <Button rounded={'full'}>How It Works</Button> */}
-    //       </Stack>
-    //     </Stack>
-    //   </Flex>
-    //   <Flex flex={1} className='hero'>
-    //     <Image
-    //       alt={'Login Image'}
-    //       className='spashimg animated-image'
-    //       src={Nft}
-    //     />
-    //   </Flex>
-    // </Stack>
+   

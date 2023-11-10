@@ -487,3 +487,44 @@ margin-left: 2rem;
   text-align: justify;
 }
 }
+
+.video-container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 4rem;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+@media (min-width:600px){
+.nftgrid ,.ptext{
+  padding-left: 9rem;
+}
+
+}
+
+@media (max-width:600px){
+  .video-container{
+    margin-left: -3.7rem;
+  }
+}
+
+/* ButtonStyles.css */
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #3366cc; /* Blue shade */
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline; /* Underline to resemble a link */
+  transition: color 0.3s;
+}
+
+.custom-button:hover {
+  color: #663399; /* Purple shade on hover */
+}

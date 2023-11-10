@@ -19,7 +19,7 @@ export default function Buy() {
            
            
             <SplitScreen />
-            <Heading mt={24}>Trending NFTs</Heading>
+            <Heading mt={24} className="ptext">Trending NFTs</Heading>
             <NFTGrid 
                 isLoading={isLoading} 
                 data={data} 
@@ -31,8 +31,8 @@ export default function Buy() {
                 <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
                 <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
             </div> */}
-            <Heading mt={14} id="dnft">Discover NFTs</Heading>
-            <Text>Browse and buy NFTs from this collection.</Text>
+            <Heading mt={14} id="dnft" className="ptext">Discover NFTs</Heading>
+            <Text className="ptext">Browse and buy NFTs from this collection.</Text>
             {/* <Heading mt={5}>Hold On Nft coming soon</Heading> */}
            
             <NFTGrid 
