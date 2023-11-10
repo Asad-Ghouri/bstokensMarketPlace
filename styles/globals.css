@@ -497,10 +497,11 @@ margin-left: 2rem;
 .video-container video {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 @media (min-width:600px){
 .nftgrid ,.ptext{
-  padding-left: 9rem;
+  padding-left: 9rem!important;
 }
 
 }
@@ -514,17 +515,19 @@ margin-left: 2rem;
 /* ButtonStyles.css */
 .custom-button {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #3366cc; /* Blue shade */
+  /* padding: 10px 20px; */
+  margin-top: 18px;
+  font-size: 20px;
+  color: white; /* Blue shade */
   background: none;
   border: none;
   cursor: pointer;
   text-align: center;
-  text-decoration: underline; /* Underline to resemble a link */
+  text-decoration: underline;
   transition: color 0.3s;
+  font-weight: bold;
 }
 
-.custom-button:hover {
-  color: #663399; /* Purple shade on hover */
-}
+/* .custom-button:hover {
+  color: #663399; 
+} */

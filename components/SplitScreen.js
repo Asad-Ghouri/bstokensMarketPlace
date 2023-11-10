@@ -121,7 +121,7 @@ export default function SplitScreen() {
                     <Stack display={{ base: 'none',md:"block" }}>  </Stack> 
                      {address && (
                          <Link as={NextLink} href={`/profile/${address}`}>
-                           <button className='custom-button'></button>
+                           <button className='custom-button'>My NFTs</button>
                          </Link>
                      )}
              </Flex>

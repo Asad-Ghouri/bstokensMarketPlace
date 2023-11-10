@@ -18,8 +18,8 @@ export default function ProfilePage() {
         console.log(ownedNfts);
     return (
         <Container maxW={"1200px"} p={5} className="profilecontainer">
-            <Heading mt={20}>{"Owned NFT(s)"}</Heading>
-            <Text>Browse and manage your NFTs from this collection.</Text>
+            <Heading mt={20} className="ptext">{"Owned NFT(s)"}</Heading>
+            <Text className="ptext">Browse and manage your NFTs from this collection.</Text>
             <NFTGrid 
                 data={ownedNfts}
                 isLoading={loadingOwnedNfts}
