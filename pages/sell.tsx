@@ -35,8 +35,8 @@ export default function Sell() {
       ) : 
       <>
         <Container maxW={"1200px"} p={5} className="sellcontainer">
-            <Heading mt={20}>Sell NFTs</Heading>
-            <Text>Select which NFT to sell below.</Text>
+            <Heading mt={20} className="ptext">Sell NFTs</Heading>
+            <Text className="ptext">Select which NFT to sell below.</Text>
             {!selectedNFT ? (
                 <NFTGrid
                     data={data}
