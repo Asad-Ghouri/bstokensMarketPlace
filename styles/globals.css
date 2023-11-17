@@ -531,3 +531,26 @@ margin-left: 2rem;
 /* .custom-button:hover {
   color: #663399; 
 } */
+
+@media(max-width:600px){
+  .hmicon{
+    margin-left: auto!important;
+    /* margin-top: 3px; */
+  }
+  .abvImg{
+    display: block!important;
+    position: absolute;
+    /* margin-right: auto; */
+    top: 0rem;
+    /* display: block; */
+    /* margin-left: auto; */
+    left: 0rem;
+  }
+  .logoimg {
+    width: 90px;
+    height: 90px;
+} 
+.nav-m{
+  margin-top: 5rem;
+}
+}
