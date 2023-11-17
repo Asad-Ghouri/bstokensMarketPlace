@@ -105,10 +105,11 @@ export default function SplitScreen() {
           </div>
         </div> */}
         <div className="video-container">
-      <video width="100%" controls loop>
+      {/* <video width="100%" controls loop>
         <source src="https://itishstudios.net/assert/bs.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
+      <img src="https://itishstudios.net/assert/bs.gif" alt="" />
     </div>
         <div className="ttext">
            <h1 className="BST">
