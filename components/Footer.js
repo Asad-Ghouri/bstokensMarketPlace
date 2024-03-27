@@ -21,7 +21,7 @@ const Footer = () => {
           </Text>
           </strong>
           <Text>
-          Bank Street
+          Office no 803 Reef tower
           </Text>
           <Text>
           Business Atrium Centre

@@ -25,13 +25,14 @@ const Footer1 = () => {
           </Text>
           </strong>
           <Text>
-          Bank Street
+          Office no 803 Reef tower
           </Text>
           <Text>
-          Business Atrium Centre Khalid bin Waleed Road
+          Cluster O Jumeirah
           </Text>
           <Text>
-          Bur Dubai. Office No. 310
+          Lake Towers Dubai
+Update White paper with new one.
           </Text>
         </GridItem>
 

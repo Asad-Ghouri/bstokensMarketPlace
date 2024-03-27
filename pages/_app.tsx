@@ -3,6 +3,7 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../styles/globals.css";
 import { Navbar } from "../components/Navbar";
+// import { BstChain } from "@thirdweb-dev/chains";
 
 import Footer from "../components/Footer"
 import BFooter from "../components/BFooter"
@@ -16,8 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
     <ThirdwebProvider 
-  
-    activeChain={activeChain}>
+    activeChain={activeChain}
+    clientId = "c63fd3dcf8c9eec46c253e543b0ff569"
+    >
       <ChakraProvider>
         <Navbar />
         <Component {...pageProps} />

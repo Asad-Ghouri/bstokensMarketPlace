@@ -204,7 +204,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 export const getStaticProps: GetStaticProps = async (context) => {
     const tokenId = context.params?.tokenId as string;
   
-    const sdk = new ThirdwebSDK("ethereum");
+    const sdk = new ThirdwebSDK("ethereum", {
+        secretKey: "GJSZNQ2zV60Sk9zQdtCleuFW8OMMubv3JJU5kRsq075vn-WtFQW2WBkxHhFflmGGAZEV9FUIQIvMrI-bB2xTMw",
+      });
   
     const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
   
@@ -226,13 +228,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 
   export const getStaticPaths: GetStaticPaths = async () => {
-    const sdk = new ThirdwebSDK("ethereum");
-  
+    const sdk = new ThirdwebSDK("ethereum" , {
+        secretKey: "GJSZNQ2zV60Sk9zQdtCleuFW8OMMubv3JJU5kRsq075vn-WtFQW2WBkxHhFflmGGAZEV9FUIQIvMrI-bB2xTMw",
+      });
+   
     const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
   
     const nfts = await contract.erc1155.getAll();
   
-    const paths = nfts.map((nft) => {
+    const paths = nfts.map((nft: { metadata: { id: any; }; }) => {
       return {
         params: {
           contractAddress: NFT_COLLECTION_ADDRESS,
