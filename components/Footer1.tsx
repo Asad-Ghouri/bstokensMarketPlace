@@ -32,7 +32,7 @@ const Footer1 = () => {
           </Text>
           <Text>
           Lake Towers Dubai
-Update White paper with new one.
+{/* Update White paper with new one. */}
           </Text>
         </GridItem>
 
