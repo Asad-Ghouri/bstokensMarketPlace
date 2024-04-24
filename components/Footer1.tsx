@@ -13,7 +13,7 @@ const Footer1 = () => {
       <Grid templateColumns="repeat(3, 1fr)" gap={4} className="footergrid">
         {/* Column 1 - Logo */}
         <GridItem colSpan={1}>
-        <img src="https://chrome-extension-zeta-seven.vercel.app/static/media/c192.a40001fb23973e3b1257.png" className='logoimg logoimg11' alt="" />
+        <img src="https://riposoconcept.com/wp-content/uploads/2024/04/BST-Trading-logo-01.png" className='logoimg logoimg11' alt="" />
         </GridItem>
 
         {/* Column 2 - Office Address */}

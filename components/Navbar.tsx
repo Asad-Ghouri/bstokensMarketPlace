@@ -67,7 +67,7 @@ export  function Navbar() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>
-              <Stack display={{ base: 'none',md:"block" }} className='abvImg'> <img src="https://chrome-extension-zeta-seven.vercel.app/static/media/c192.a40001fb23973e3b1257.png" className='logoimg' alt="" /> </Stack>
+              <Stack display={{ base: 'none',md:"block" }} className='abvImg'> <img src="https://riposoconcept.com/wp-content/uploads/2024/04/BST-Trading-logo-01.png" className='logoimg' alt="" /> </Stack>
             </Box>
             <HStack as={'nav'} spacing={4}  className={address?"myclass":"aas"} display={{ base: 'none', md: 'flex' }}>
               {/* {Links.map((link) => (
