@@ -113,7 +113,7 @@ export default function SplitScreen() {
     </div>
         <div className="ttext">
            <h1 className="BST">
-            BSToken NFT
+           Blue Sapphire Trading
            </h1>
            <h3>
             This groundbreaking innovation is founded on original bracelet adorned with exquisite gematones a resilient titanium body , resulting in a perfect blend, particularly suited for the metaverce
