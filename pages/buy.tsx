@@ -55,6 +55,7 @@ export default function Buy() {
 
     // }, []);
 
+    
     const contractAddress = MARKETPLACE_ADDRESS;
   const contractABI = Abi;
 
@@ -63,7 +64,8 @@ export default function Buy() {
   const contract1 = new ethers.Contract(contractAddress, contractABI, provider);
 
   // Function to read from the contract
-  const [salesInfoList, setSalesInfoList] = useState([false]);
+  const [salesInfoList, setSalesInfoList] = useState<any[]>([]);
+
 
   // Function to fetch sales information for a single sale ID
 //   const fetchSalesInfo = async () => {
@@ -138,7 +140,8 @@ console.log("salesInfoList",salesInfoList)
 :
 ""
 } */}
-{salesInfoList[0].tokenId?
+
+{salesInfoList.length > 0?
 <div className="salespart">
       <Heading mt={24} className="">Sales Information</Heading>
       <div className="sales-cards">
