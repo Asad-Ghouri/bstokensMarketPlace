@@ -15,7 +15,7 @@ body {
     background-image: url(https://itishstudios.net/assert/bg.jpg)!important;
     background-repeat: no-repeat;
     background-size: cover!important;
-    /* overflow-x: hidden!important; */
+    overflow-x: hidden!important;
 }
 
 .sellfooter{
