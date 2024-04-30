@@ -558,3 +558,31 @@ margin-left: 2rem;
 .css-isdmms{
   background:#0B0066!important;
 }
+
+.sales-cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 25%;
+  /* margin-top: 2rem; */
+  /* width: 44%; */
+    margin-top: 2rem;
+    border: 1px solid;
+    padding: 15px;
+}
+
+.salespart{
+  padding-left: 9rem;
+}
+
+@media(max-width:600px){
+  .salespart {
+    padding-left: 0rem;
+   }
+
+   .card{
+    width: 100%;
+   }
+}

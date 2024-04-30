@@ -4,7 +4,7 @@ import {
     MARKETPLACE_ADDRESS, 
     NFT_COLLECTION_ADDRESS 
 } from "../const/addresses";
-import { ThirdwebNftMedia, useContract, useValidDirectListings, useValidEnglishAuctions } from "@thirdweb-dev/react";
+import { ThirdwebNftMedia, useContract,  } from "@thirdweb-dev/react";
 import { Box, Flex, Skeleton, Text } from "@chakra-ui/react";
 
 type Props = {
@@ -14,18 +14,18 @@ type Props = {
 export default function NFTComponent({ nft }: Props) {
     const  {contract: marketplace, isLoading: loadingMarketplace } = useContract(MARKETPLACE_ADDRESS, "marketplace-v3");
 
-    const { data: directListing, isLoading: loadingDirectListing } = 
-        useValidDirectListings(marketplace, {
-            tokenContract: NFT_COLLECTION_ADDRESS,
-            tokenId: nft.metadata.id,
-        });
+    // const { data: directListing, isLoading: loadingDirectListing } = 
+    //     useValidDirectListings(marketplace, {
+    //         tokenContract: NFT_COLLECTION_ADDRESS,
+    //         tokenId: nft.metadata.id,
+    //     });
 
     //Add for auciton section
-    const { data: auctionListing, isLoading: loadingAuction} = 
-        useValidEnglishAuctions(marketplace, {
-            tokenContract: NFT_COLLECTION_ADDRESS,
-            tokenId: nft.metadata.id,
-        });
+    // const { data: auctionListing, isLoading: loadingAuction} = 
+    //     useValidEnglishAuctions(marketplace, {
+    //         tokenContract: NFT_COLLECTION_ADDRESS,
+    //         tokenId: nft.metadata.id,
+    //     });
 
     return (
         <Flex direction={"column"} backgroundColor={"#EEE"} justifyContent={"center"} padding={"2.5"} borderRadius={"6px"} borderColor={"lightgray"} borderWidth={1}>
@@ -35,7 +35,7 @@ export default function NFTComponent({ nft }: Props) {
             <Text fontSize={"small"} color={"darkgray"}>Token ID #{nft.metadata.id}</Text>
             <Text fontWeight={"bold"}>{nft.metadata.name}</Text>
 
-            <Box>
+            {/* <Box>
                 {loadingMarketplace || loadingDirectListing || loadingAuction ? (
                     <Skeleton></Skeleton>
                 ) : directListing && directListing[0] ? (
@@ -60,7 +60,7 @@ export default function NFTComponent({ nft }: Props) {
                         </Flex>
                     </Box>
                 )}
-            </Box>
+            </Box> */}
         </Flex>
     )
 };
