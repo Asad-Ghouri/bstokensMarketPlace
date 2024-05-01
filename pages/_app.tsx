@@ -7,6 +7,7 @@ import { BstChain } from "@thirdweb-dev/chains";
 
 import Footer from "../components/Footer"
 import BFooter from "../components/BFooter"
+import React from "react";
 
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.

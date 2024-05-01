@@ -20,8 +20,11 @@ import {
 import { ethers } from 'ethers';
 
 
+import { ThirdwebNftMedia  } from "@thirdweb-dev/react";
+
 
 import SalesCard from '../components/SalesCard';
+import Link from "next/link";
 
 export default function Buy() {
     const { contract } = useContract(NFT_COLLECTION_ADDRESS);
@@ -115,37 +118,31 @@ console.log("salesInfoList",salesInfoList)
            
            
             <SplitScreen />
-            <Heading mt={24} className="ptext">Trending NFTs</Heading>
-            <NFTGrid 
-                isLoading={isLoading} 
-                data={data} 
-                emptyText={"No NFTs found"}
-            />
-
-
-{/* {salesInfoList[0].tokenId?
-    <div>
-        {salesInfoList.map((salesInfo, index) => (
-            <div key={index}>
-                <p>Seller: {salesInfo.seller}</p>
-                <p>Token: {salesInfo.token}</p>
-                <p>Token ID: {ethers.BigNumber.from(salesInfo.tokenId._hex).toString()}</p>
-                <p>Amount of Token: {ethers.BigNumber.from(salesInfo.amountOfToken._hex).toString()}</p>
-                <p>Deadline: {ethers.BigNumber.from(salesInfo.deadline._hex).toString()}</p>
-                <p>Price: {ethers.BigNumber.from(salesInfo.price._hex).toString()}</p>
-                <p>Is Sold: {salesInfo.isSold.toString()}</p>
-            </div>
-        ))}
-    </div>
-:
-""
-} */}
 
 {salesInfoList.length > 0?
 <div className="salespart">
-      <Heading mt={24} className="">Sales Information</Heading>
+      <Heading mt={24} className="">Top NFT's In Our MarketPlace</Heading>
       <div className="sales-cards">
         {salesInfoList.map((salesInfo, index) => (
+         <Link
+         key={index}
+         className="card"
+         href={{
+           pathname: `/token/${NFT_COLLECTION_ADDRESS}/${ethers.BigNumber.from(salesInfo.tokenId._hex).toString()}`,
+           query: {
+             // Pass additional arguments here as query parameters
+             seller: salesInfo.seller,
+             token: salesInfo.token,
+             tokenId: ethers.BigNumber.from(salesInfo.tokenId._hex).toString(),
+             amountOfToken: ethers.BigNumber.from(salesInfo.amountOfToken._hex).toString(),
+             deadline: ethers.BigNumber.from(salesInfo.deadline._hex).toString(),
+             price: ethers.BigNumber.from(salesInfo.price._hex).toString(),
+             isSold: salesInfo.isSold,
+
+             // Add more query parameters as needed
+           },
+         }}
+       >
           <SalesCard
             key={index}
             seller={salesInfo.seller}
@@ -155,57 +152,32 @@ console.log("salesInfoList",salesInfoList)
             deadline={ethers.BigNumber.from(salesInfo.deadline._hex).toString()}
             price={ethers.BigNumber.from(salesInfo.price._hex).toString()}
             isSold={salesInfo.isSold}
+            // urls=""
           />
+           </Link>
         ))}
-      </div>
-      
-      <div className="sales-cards">
-        
-          {/* <SalesCard
-          
-            seller={salesInfoList.seller}
-            token={salesInfoList.token}
-            tokenId={ethers.BigNumber.from(salesInfoList.tokenId._hex).toString()}
-            amountOfToken={ethers.BigNumber.from(salesInfoList.amountOfToken._hex).toString()}
-            deadline={ethers.BigNumber.from(salesInfoList.deadline._hex).toString()}
-            price={ethers.BigNumber.from(salesInfoList.price._hex).toString()}
-            isSold={salesInfoList.isSold}
-          /> */}
-        {/* <div>
-        {salesInfoList.map((salesInfo, index) => (
-            <div key={index}>
-                <p>Seller: {salesInfo.seller}</p>
-                <p>Token: {salesInfo.token}</p>
-                <p>Token ID: {ethers.BigNumber.from(salesInfo.tokenId._hex).toString()}</p>
-                <p>Amount of Token: {ethers.BigNumber.from(salesInfo.amountOfToken._hex).toString()}</p>
-                <p>Deadline: {ethers.BigNumber.from(salesInfo.deadline._hex).toString()}</p>
-                <p>Price: {ethers.BigNumber.from(salesInfo.price._hex).toString()}</p>
-                <p>Is Sold: {salesInfo.isSold.toString()}</p>
-            </div>
-        ))}
-    </div> */}
       </div>
 </div>
     :
-    ""
+    <img src="https://icon-park.com/imagefiles/loading7_pink.gif" className="loader" alt="" />
 }
 
-
-            {/* <div className="flex">
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-                <img src="https://itishstudios.net/assert/nft.jpeg" alt="" />
-            </div> */}
-            <Heading mt={14} id="dnft" className="ptext">Discover NFTs</Heading>
-            <Text className="ptext">Browse and buy NFTs from this collection.</Text>
-            {/* <Heading mt={5}>Hold On Nft coming soon</Heading> */}
-           
+         
+<Heading mt={24} className="ptext">Recently Minted</Heading>
             <NFTGrid 
                 isLoading={isLoading} 
                 data={data} 
                 emptyText={"No NFTs found"}
             />
+
+
+            {/* <Heading mt={14} id="dnft" className="ptext">Discover NFTs</Heading>
+            <Text className="ptext">Browse and buy NFTs from this collection.</Text>
+            <NFTGrid 
+                isLoading={isLoading} 
+                data={data} 
+                emptyText={"No NFTs found"}
+            /> */}
            <Stack mt={20}> <Footer1  /> </Stack> 
         <BFooter />
         </Container>

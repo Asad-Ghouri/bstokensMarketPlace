@@ -15,6 +15,8 @@ export default function ProfilePage() {
         nftCollection,
         router.query.address as string
     );
+    // await contract.erc1155.getAll();
+
         console.log(ownedNfts);
     return (
         <Container maxW={"1200px"} p={5} className="profilecontainer">

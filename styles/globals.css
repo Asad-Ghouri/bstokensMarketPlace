@@ -562,6 +562,7 @@ margin-left: 2rem;
 .sales-cards{
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .card{
@@ -571,12 +572,20 @@ margin-left: 2rem;
     margin-top: 2rem;
     border: 1px solid;
     padding: 15px;
+    background: white;
+    color: black;
+    border-radius: 6px;
 }
 
 .salespart{
   padding-left: 9rem;
 }
 
+.loader{
+  width: 33px;
+    margin-top: 38px;
+    margin-left: 9rem;
+}
 @media(max-width:600px){
   .salespart {
     padding-left: 0rem;
