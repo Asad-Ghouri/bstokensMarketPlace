@@ -2,6 +2,7 @@ import NextLink from 'next/link'
 import type { NextPage } from "next";
 import { Button, Container, Flex, Heading, Image, Stack } from '@chakra-ui/react';
 import Buy from './buy';
+import React from 'react';
 const Home: NextPage = () => {
   return (
     // <Container maxW={"1200px"}>

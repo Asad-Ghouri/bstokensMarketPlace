@@ -9,7 +9,7 @@ export default function ProfilePage() {
     const router = useRouter();
     const {contract: nftCollection} = useContract(NFT_COLLECTION_ADDRESS);
 
-    const { contract: marketplace} = useContract(MARKETPLACE_ADDRESS, "marketplace-v3");  
+    // const { contract: marketplace} = useContract(MARKETPLACE_ADDRESS, "marketplace-v3");  
 
     const {data: ownedNfts, isLoading: loadingOwnedNfts} = useOwnedNFTs(
         nftCollection,

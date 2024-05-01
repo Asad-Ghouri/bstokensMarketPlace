@@ -27,6 +27,8 @@ import {
 import { Abi } from "../const/addresses";
 import { ethers } from "ethers";
 
+import {  toWei } from "@thirdweb-dev/sdk";
+
 type Props = {
   nft: NFTType;
 };
@@ -55,15 +57,15 @@ export default function SaleInfo({ nft }: Props) {
   const [TokenId, setTokenId] = useState<any>();
   const [AmountToken, setAmountToken] = useState<any>();
 
-  const { contract: marketplace } = useContract(
-    MARKETPLACE_ADDRESS,
-    "marketplace-v3"
-  );
+//   const { contract: marketplace } = useContract(
+//     MARKETPLACE_ADDRESS,
+//     "marketplace-v3"
+//   );
 
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
 
-  const { mutateAsync: createDirectListing } =
-    useCreateDirectListing(marketplace);
+//   const { mutateAsync: createDirectListing } =
+//     useCreateDirectListing(marketplace);
 
   async function checkAndProvideApproval() {
     const hasApproval = await nftCollection?.call("isApprovedForAll", [
@@ -98,7 +100,7 @@ export default function SaleInfo({ nft }: Props) {
 
   // Initialize provider and contract
   const abi = Abi;
-  const { contract: marketplaceup, isLoading: loadingMarketplace } = useContract(
+  const { contract: marketplace, isLoading: loadingMarketplace } = useContract(
     MARKETPLACE_ADDRESS,
     abi
   );
@@ -117,19 +119,21 @@ export default function SaleInfo({ nft }: Props) {
     console.log("standard price is ", data.price);
     console.log("wei price is ", weiAmount);
 
-    const result = await marketplaceup?.call("createList", [
+    const result = await marketplace?.call("createList", [
       Token,
       TokenId,
       AmountToken,
       unixTimestamp,
       weiAmount,
-    ]);
+    ], {
+        value: toWei(data.price),
+      });
     return result;
   }
 
   //Add for Auction
-  const { mutateAsync: createAuctionListing } =
-    useCreateAuctionListing(marketplace);
+//   const { mutateAsync: createAuctionListing } =
+//     useCreateAuctionListing(marketplace);
 
   const { register: registerAuction, handleSubmit: handleSubmitAuction } =
     useForm<AuctionFormData>({
@@ -143,19 +147,19 @@ export default function SaleInfo({ nft }: Props) {
       },
     });
 
-  async function handleSubmissionAuction(data: AuctionFormData) {
-    await checkAndProvideApproval();
-    const txResult = await createAuctionListing({
-      assetContractAddress: data.nftContractAddress,
-      tokenId: data.tokenId,
-      buyoutBidAmount: data.buyoutPrice,
-      minimumBidAmount: data.floorPrice,
-      startTimestamp: new Date(data.startDate),
-      endTimestamp: new Date(data.endDate),
-    });
+//   async function handleSubmissionAuction(data: AuctionFormData) {
+//     await checkAndProvideApproval();
+//     const txResult = await createAuctionListing({
+//       assetContractAddress: data.nftContractAddress,
+//       tokenId: data.tokenId,
+//       buyoutBidAmount: data.buyoutPrice,
+//       minimumBidAmount: data.floorPrice,
+//       startTimestamp: new Date(data.startDate),
+//       endTimestamp: new Date(data.endDate),
+//     });
 
-    return txResult;
-  }
+//     return txResult;
+//   }
 
   return (
     <Tabs>
@@ -281,7 +285,7 @@ export default function SaleInfo({ nft }: Props) {
                 {...registerAuction("buyoutPrice")}
               />
             </Box>
-            <Web3Button
+            {/* <Web3Button
               contractAddress={MARKETPLACE_ADDRESS}
               action={async () => {
                 return await handleSubmitAuction(handleSubmissionAuction)();
@@ -293,7 +297,7 @@ export default function SaleInfo({ nft }: Props) {
               }}
             >
               Create Auction Listing
-            </Web3Button>
+            </Web3Button> */}
           </Stack>
         </TabPanel>
       </TabPanels>

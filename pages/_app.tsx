@@ -5,6 +5,8 @@ import "../styles/globals.css";
 import { Navbar } from "../components/Navbar";
 import { BstChain } from "@thirdweb-dev/chains";
 
+import  Navbar1  from "../components/Navbar1";
+
 import Footer from "../components/Footer"
 import BFooter from "../components/BFooter"
 import React from "react";
@@ -22,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     clientId = "c63fd3dcf8c9eec46c253e543b0ff569"
     >
       <ChakraProvider>
-        <Navbar />
+        <Navbar1 />
         <Component {...pageProps} />
         {/* <Footer />
         <BFooter /> */}

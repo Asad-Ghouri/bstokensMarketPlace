@@ -8,6 +8,9 @@ import { useContract, useNFTs } from "@thirdweb-dev/react";
 import Footer1 from "../components/Footer1"
 import BFooter from "../components/BFooter"
 
+import Footer2 from "../components/Footer2.tsx"
+
+
 import SplitScreen from "../components/SplitScreen"
 
 
@@ -25,6 +28,8 @@ import { ThirdwebNftMedia  } from "@thirdweb-dev/react";
 
 import SalesCard from '../components/SalesCard';
 import Link from "next/link";
+
+import { Alert } from "flowbite-react";
 
 export default function Buy() {
     const { contract } = useContract(NFT_COLLECTION_ADDRESS);
@@ -89,7 +94,7 @@ export default function Buy() {
 
 const fetchSalesInfo = async () => {
     try {
-        const salesInfoList = [];
+        const salesInfoList: any[] = []; // Explicitly type salesInfoList as an array of any
         const salesIdHex = await contract1.salesId();
         const salesIdDecimal = ethers.BigNumber.from(salesIdHex._hex).toString();
         const balanceBSTC = parseFloat(salesIdDecimal);
@@ -106,6 +111,7 @@ const fetchSalesInfo = async () => {
     }
 };
 
+
   // Fetch sales information when component mounts
   useEffect(() => {
     fetchSalesInfo();
@@ -118,6 +124,8 @@ console.log("salesInfoList",salesInfoList)
            
            
             <SplitScreen />
+
+            {/* <Alert color="info">Alert!</Alert>; */}
 
 {salesInfoList.length > 0?
 <div className="salespart">
@@ -178,8 +186,8 @@ console.log("salesInfoList",salesInfoList)
                 data={data} 
                 emptyText={"No NFTs found"}
             /> */}
-           <Stack mt={20}> <Footer1  /> </Stack> 
-        <BFooter />
+           <Stack mt={20}> <Footer2  /> </Stack> 
+        {/* <BFooter /> */}
         </Container>
     )
 };

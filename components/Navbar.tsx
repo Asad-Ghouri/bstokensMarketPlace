@@ -24,6 +24,7 @@ import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link';
+import React from 'react';
 
 interface Props {
   children: React.ReactNode

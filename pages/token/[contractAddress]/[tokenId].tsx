@@ -70,6 +70,21 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     }
   }
 
+  async function buyListing1() {
+    try {
+      // Call the 'buyListToken' function on the marketplace contract
+      const as = 1;
+      const result = await marketplace?.call("createList", ["0xb6CC686cD9863B433A3b92ee9e0b16a6803F4601",1,10,1717126560,10000000000000000000], {
+        value: toWei(priceInEther),
+      });
+
+      // Handle the result of the transaction as needed
+      console.log("Transaction result:", result);
+    } catch (error) {
+      // Handle any errors that occur during the transaction
+      console.error("Error while buying listing:", error);
+    }
+  }
   // const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
 
   // const { data: directListing, isLoading: loadingDirectListing } =

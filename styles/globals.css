@@ -197,12 +197,14 @@ nav a p{
     margin-right: 9rem;
   }
   .logoimg {
-    width: 95px;
-    height: 100px;
-    margin-left: 4rem;
-    margin-top: 32px;
+    width: 55px;
+    height: 62px;
+    margin-left: 0;
+    margin-top: 0px;
 }
-
+.cwallet{
+  margin-right: 7px!important;
+}
 /* .logoimg11{
   width: 110px;
   height: 110px;
@@ -325,8 +327,8 @@ nav a p{
   color: white!important;
 }
 .logoimg11{
-  height: 120px;
-  width: 120px;
+  height: 60px;
+  width: 60px;
   margin-top: -10px;
 }
 
@@ -501,7 +503,7 @@ margin-left: 2rem;
 }
 @media (min-width:600px){
 .nftgrid ,.ptext{
-  padding-left: 9rem!important;
+  padding-left: 1rem!important;
 }
 
 }
@@ -538,17 +540,17 @@ margin-left: 2rem;
     /* margin-top: 3px; */
   }
   .abvImg{
-    display: block!important;
+    display: block !important;
     position: absolute;
-    /* margin-right: auto; */
-    top: 0rem;
-    /* display: block; */
-    /* margin-left: auto; */
-    left: 0rem;
+    top: 20px;
+    left: 60px;
   }
   .logoimg {
-    width: 90px;
-    height: 90px;
+    width: 43px;
+    height: 48px;
+    margin-left: 1px;
+    /* display: block; */
+    margin-top: -2px;
 } 
 .nav-m{
   margin-top: 5rem;
@@ -578,7 +580,7 @@ margin-left: 2rem;
 }
 
 .salespart{
-  padding-left: 9rem;
+  padding-left: 1rem;
 }
 
 .loader{
@@ -594,4 +596,26 @@ margin-left: 2rem;
    .card{
     width: 100%;
    }
+   /* .logoimg{
+    display: none;
+   } */
+}
+
+.main-nav{
+  /* background-color: #0b0066 !important;  */
+  margin-top: 12px!important;
+}
+
+
+@media screen and (min-width: 48em) {
+  .css-p9pngt {
+      grid-template-columns: 2fr 1fr 1fr 1fr!important;
+      width: 125%!important;
+      margin-left: -10rem;
+  }
+}
+
+.bannerImage{
+  width: 101%;
+  border-radius: 10px;
 }
