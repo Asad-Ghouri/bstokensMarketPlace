@@ -129,7 +129,7 @@ console.log("salesInfoList",salesInfoList)
 
 {salesInfoList.length > 0?
 <div className="salespart">
-      <Heading mt={24} className="">Top NFT's In Our MarketPlace</Heading>
+      <Heading mt={24} className="">Top NFTs In Our MarketPlace</Heading>
       <div className="sales-cards">
         {salesInfoList.map((salesInfo, index) => (
          <Link
