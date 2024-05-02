@@ -656,3 +656,12 @@ margin-left: 2rem;
 .sloader{
   margin-top: 2rem;
 }
+
+.selbtn{
+  background-color:  #110665!important;
+  color: white!important;
+}
+.lbt{
+  padding: 8px;
+  border-radius: 8px;
+}

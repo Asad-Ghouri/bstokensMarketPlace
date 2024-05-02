@@ -277,8 +277,13 @@ export default function SaleInfo({ nft }: Props) {
                 {...registerDirect("price")}
               />
             </Box>
+            {Loading?
+
+            <button className="selbtn lbt">Loading....</button>
+            :
             <Web3Button
               contractAddress={MARKETPLACE_ADDRESS}
+              className="selbtn"
               action={async () => {
                 await handleSubmitDirect(handleSubmissionDirect)();
               }}
@@ -288,8 +293,10 @@ export default function SaleInfo({ nft }: Props) {
               //   );
               // }}
             >
-             {!Loading? "Create Direct Listing":"Loading..." }
+              Create Direct Listing
             </Web3Button>
+
+            }
           </Stack>
         </TabPanel>
         <TabPanel>
