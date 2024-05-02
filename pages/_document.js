@@ -11,7 +11,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
           />
-         <script src="https://cdn.userway.org/widget.js" data-account="fadSb1CsEX"></script>
+         {/* <script src="https://cdn.userway.org/widget.js" data-account="fadSb1CsEX"></script> */}
         </Head>
       
         <body>
