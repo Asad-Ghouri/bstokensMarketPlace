@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import { Container, Heading, Stack, Text } from "@chakra-ui/react";
+import { Container, Heading, Skeleton, Stack, Text } from "@chakra-ui/react";
 import NFTGrid from "../components/NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/addresses";
 import { useContract, useNFTs } from "@thirdweb-dev/react";
@@ -188,7 +188,8 @@ console.log("salesInfoList",salesInfoList)
       </div>
 </div>
     :
-    <img src="https://icon-park.com/imagefiles/loading7_pink.gif" className="loader" alt="" />
+    <Skeleton  height={"322px"} width={"312px"} className="sloader" />
+    // <img src="https://icon-park.com/imagefiles/loading7_pink.gif" className="loader" alt="" />
 }
 
          
