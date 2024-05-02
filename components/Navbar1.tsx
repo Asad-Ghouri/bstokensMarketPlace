@@ -97,6 +97,9 @@ export default function WithAction() {
               <Link as={NextLink} href="/stake" mx={2.5}>
                 <Text>Stake</Text>
               </Link>
+              <Link as={NextLink} href="/mint" mx={2.5}>
+                <Text>Mint</Text>
+              </Link>
               <Link as={NextLink} href="/wallet" mx={2.5}>
                 <Text>Wallet</Text>
               </Link>
