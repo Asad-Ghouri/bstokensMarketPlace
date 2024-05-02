@@ -1,4 +1,4 @@
-import { Box, Button, Card, Container, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Card, Container, Divider, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { ThirdwebNftMedia, useAddress, useContract, useOwnedNFTs } from "@thirdweb-dev/react";
 import React, { useState } from "react";
 import { NFT_COLLECTION_ADDRESS } from "../const/addresses";
@@ -13,6 +13,8 @@ import {
 
 import Footer1 from "../components/Footer1"
 import BFooter from "../components/BFooter"
+
+import Footer2 from "../components/Footer2.tsx"
 
 export default function Sell() {
     const { contract } = useContract(NFT_COLLECTION_ADDRESS);
@@ -76,8 +78,11 @@ export default function Sell() {
         <br />
         <br />
         <br />
-        <div className="sellfooter"> <Footer1 /></div>
-        <BFooter />
+        <div className="sellfooter"> 
+        <Divider />
+        <Footer2 />
+        </div>
+        {/* <BFooter /> */}
       </>
 }
          

@@ -22,7 +22,7 @@ export default function NFTGrid({
         <SimpleGrid columns={4} spacing={6} w={"100%"} padding={2.5} my={5} className="nftgrid">
             {isLoading ? (
                 [...Array(20)].map((_, index) => (
-                    <Skeleton key={index} height={"312px"} width={"100%"} />
+                    <Skeleton key={index} height={"322px"} width={"312px"} />
                 ))
             ) : data && data.length > 0 ? (
                 data.map((nft) => 

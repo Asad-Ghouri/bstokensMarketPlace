@@ -29,6 +29,10 @@ import { ethers } from "ethers";
 
 import {  toWei } from "@thirdweb-dev/sdk";
 
+
+import { useToast } from '@chakra-ui/react'
+import { useAddress } from "@thirdweb-dev/react";
+
 type Props = {
   nft: NFTType;
 };
@@ -59,6 +63,8 @@ export default function SaleInfo({ nft }: Props) {
   const [Loading, setLoading] = useState<any>();
 
 
+  const address = useAddress();
+  const toast = useToast()
 //   const { contract: marketplace } = useContract(
 //     MARKETPLACE_ADDRESS,
 //     "marketplace-v3"
@@ -109,6 +115,17 @@ export default function SaleInfo({ nft }: Props) {
   async function handleSubmissionDirect(data: DirectFormData) {
     // await checkAndProvideApproval();
     try {
+      if(!address){
+        toast({
+          // position: 'bottom-center',
+          render: () => (
+            <Box color='white' p={3} bg='red.500'>
+              Connect your wallet First
+            </Box>
+          ),
+        })
+        return;
+      }
       setLoading(true);
   
       const unixTimestamp = Math.floor(new Date(data.endDate).getTime() / 1000);
@@ -130,11 +147,28 @@ export default function SaleInfo({ nft }: Props) {
         unixTimestamp,
         weiAmount,
       ]);
+      
       setLoading(false)
+      toast({
+        // position: 'bottom-center',
+        render: () => (
+          <Box color='white' p={3} bg='green.500'>
+            Successfully Done
+          </Box>
+        ),
+      })
       return result;
   } catch (error) {
       console.error("Error creating list:", error);
       setLoading(false)
+      toast({
+        // position: 'bottom-center',
+        render: () => (
+          <Box color='white' p={3} bg='red.500'>
+           An Error Occurred
+          </Box>
+        ),
+      })
       
   }
   

@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
 
-import {Box} from "@chakra-ui/react";
+import {Box, Divider} from "@chakra-ui/react";
 
 import Footer1 from "../components/Footer1"
 import BFooter from "../components/BFooter"
+import React from "react";
+import Footer2 from "../components/Footer2.tsx"
 
 const wallet: NextPage = () => {
     return (
@@ -19,8 +21,10 @@ const wallet: NextPage = () => {
           ></iframe>
         </div>
           
-        <Box className="wff"><Footer1 />  </Box>
-          <BFooter />
+        <Box className="wff">
+        <Divider />
+          <Footer2 />  </Box>
+          {/* <BFooter /> */}
         </div>
         </>
     );

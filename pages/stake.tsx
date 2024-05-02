@@ -23,6 +23,7 @@ import {Box} from "@chakra-ui/react";
 
   import Footer1 from "../components/Footer1"
 import BFooter from "../components/BFooter"
+import React from "react";
 
   const Stake: NextPage = () => {
     const address = useAddress();

@@ -284,7 +284,7 @@ nav a p{
 
   }
   .sellcontainer , .profilecontainer{
-    padding-left: 5rem!important;
+    padding-left: 2rem!important;
   }
 }
 
@@ -641,4 +641,14 @@ margin-left: 2rem;
 
 .css-15wklsr{
   background-color: #110665!important;
+}
+
+.css-vdtjut{
+  width: 100%!important;
+}
+
+@media (max-width:600px) {
+  .css-vbm0bs , .css-w0xf43 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))!important;
+  }
 }

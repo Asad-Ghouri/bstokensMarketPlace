@@ -10,6 +10,7 @@ import {
     stakingContractAddress,
   } from "../const/contractAddresses";
   import styles from "../styles/Home.module.css";
+import React from "react";
   
   interface NFTCardProps {
     tokenId: number;

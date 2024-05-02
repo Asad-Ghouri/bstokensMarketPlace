@@ -32,6 +32,10 @@ import { useRouter } from "next/router";
 import { ethers } from "ethers";
 // import {web3} from "web3";
 
+
+import { useToast } from '@chakra-ui/react'
+import { useAddress } from "@thirdweb-dev/react";
+
 type Props = {
   nft: NFT;
   contractMetadata: any;
@@ -39,6 +43,10 @@ type Props = {
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
   const router = useRouter();
+
+  const address = useAddress();
+  const toast = useToast()
+
   const { seller, token, tokenId, amountOfToken, deadline, price, isSold } =
     router.query;
 
@@ -57,6 +65,18 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
   async function buyListing() {
     try {
       // Call the 'buyListToken' function on the marketplace contract
+      
+      if(!address){
+        toast({
+          // position: 'bottom-center',
+          render: () => (
+            <Box color='white' p={3} bg='red.500'>
+              Connect your wallet First
+            </Box>
+          ),
+        })
+        return;
+      }
       const as = 1;
       console.log("tokenId :", tokenId);
 
@@ -66,9 +86,25 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
       // Handle the result of the transaction as needed
       console.log("Transaction result:", result);
+      toast({
+        // position: 'bottom-center',
+        render: () => (
+          <Box color='white' p={3} bg='green.500'>
+            Successfully Done
+          </Box>
+        ),
+      })
     } catch (error) {
       // Handle any errors that occur during the transaction
       console.error("Error while buying listing:", error);
+      toast({
+        // position: 'bottom-center',
+        render: () => (
+          <Box color='white' p={3} bg='red.500'>
+           An Error Occurred
+          </Box>
+        ),
+      })
     }
   }
 
@@ -176,7 +212,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             <Text fontSize={"small"}>{isSold}</Text>
           </Stack>
 
-          <button onClick={buyListing1} className="buybtn">Buy</button>
+          <button onClick={buyListing} className="buybtn">Buy</button>
         </Stack>
       </SimpleGrid>
     </Container>
