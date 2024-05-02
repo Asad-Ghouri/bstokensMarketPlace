@@ -56,6 +56,8 @@ export default function SaleInfo({ nft }: Props) {
   const [Token, setToken] = useState<any>();
   const [TokenId, setTokenId] = useState<any>();
   const [AmountToken, setAmountToken] = useState<any>();
+  const [Loading, setLoading] = useState<any>();
+
 
 //   const { contract: marketplace } = useContract(
 //     MARKETPLACE_ADDRESS,
@@ -106,29 +108,36 @@ export default function SaleInfo({ nft }: Props) {
   );
   async function handleSubmissionDirect(data: DirectFormData) {
     // await checkAndProvideApproval();
-
-    const unixTimestamp = Math.floor(new Date(data.endDate).getTime() / 1000);
-    console.log("standard date is ", data.endDate);
-    console.log("unix date is ", unixTimestamp);
-
-    const etherPrice: number = parseInt(data.price);
-    const ether = ethers.utils.parseEther(etherPrice.toString());
-    // Convert BigNumber to wei
-    const weiAmount = ethers.utils.formatUnits(ether, "wei");
-
-    console.log("standard price is ", data.price);
-    console.log("wei price is ", weiAmount);
-
-    const result = await marketplace?.call("createList", [
-      Token,
-      TokenId,
-      AmountToken,
-      unixTimestamp,
-      weiAmount,
-    ], {
-        value: toWei(data.price),
-      });
-    return result;
+    try {
+      setLoading(true);
+  
+      const unixTimestamp = Math.floor(new Date(data.endDate).getTime() / 1000);
+      console.log("standard date is ", data.endDate);
+      console.log("unix date is ", unixTimestamp);
+  
+      const etherPrice: number = parseInt(data.price);
+      const ether = ethers.utils.parseEther(etherPrice.toString());
+      // Convert BigNumber to wei
+      const weiAmount = ethers.utils.formatUnits(ether, "wei");
+  
+      console.log("standard price is ", data.price);
+      console.log("wei price is ", weiAmount);
+  
+      const result = await marketplace?.call("createList", [
+        Token,
+        TokenId,
+        AmountToken,
+        unixTimestamp,
+        weiAmount,
+      ]);
+      setLoading(false)
+      return result;
+  } catch (error) {
+      console.error("Error creating list:", error);
+      setLoading(false)
+      
+  }
+  
   }
 
   //Add for Auction
@@ -239,13 +248,13 @@ export default function SaleInfo({ nft }: Props) {
               action={async () => {
                 await handleSubmitDirect(handleSubmissionDirect)();
               }}
-              onSuccess={(txResult) => {
-                router.push(
-                  `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`
-                );
-              }}
+              // onSuccess={(txResult) => {
+              //   router.push(
+              //     `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`
+              //   );
+              // }}
             >
-              Create Direct Listing
+             {!Loading? "Create Direct Listing":"Loading..." }
             </Web3Button>
           </Stack>
         </TabPanel>

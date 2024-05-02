@@ -535,7 +535,7 @@ export const Abi = [
 				"type": "uint256"
 			},
 			{
-				"internalType": "enum BstMarketplace.Action",
+				"internalType": "enum Marketplace.Action",
 				"name": "action",
 				"type": "uint8"
 			}

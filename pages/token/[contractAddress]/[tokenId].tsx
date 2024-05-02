@@ -58,6 +58,8 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     try {
       // Call the 'buyListToken' function on the marketplace contract
       const as = 1;
+      console.log("tokenId :", tokenId);
+
       const result = await marketplace?.call("buyListToken", [tokenId], {
         value: toWei(priceInEther),
       });
@@ -174,7 +176,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             <Text fontSize={"small"}>{isSold}</Text>
           </Stack>
 
-          <button onClick={buyListing}>Buy</button>
+          <button onClick={buyListing1} className="buybtn">Buy</button>
         </Stack>
       </SimpleGrid>
     </Container>

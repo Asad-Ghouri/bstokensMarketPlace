@@ -86,7 +86,10 @@ export default function LargeWithNewsletter() {
             </Box>
             <Text fontSize={'sm'}> Copyright © 2024 Blue Sapphire. All Rights Reserved.</Text>
             <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
+            {/* <Text fontSize={'sm'}> Office Address:</Text> */}
+            <Text fontSize={'sm'}> Office no 803 Reef tower  Cluster O Jumeirah  Lake Towers Dubai</Text>
+
+              {/* <SocialButton label={'Twitter'} href={'#'}>
                 <FaTwitter />
               </SocialButton>
               <SocialButton label={'YouTube'} href={'#'}>
@@ -94,11 +97,11 @@ export default function LargeWithNewsletter() {
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
                 <FaInstagram />
-              </SocialButton>
+              </SocialButton> */}
             </Stack>
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>Company</ListHeader>
+            <ListHeader>Quick Links</ListHeader>
             <Box as="a" href={'/'}>
                Home
             </Box>
@@ -116,7 +119,7 @@ export default function LargeWithNewsletter() {
             </Box> */}
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>Support</ListHeader>
+            <ListHeader>Quick Links</ListHeader>
             <Box as="a" href={'/wallet'}>
               Wallet
             </Box>

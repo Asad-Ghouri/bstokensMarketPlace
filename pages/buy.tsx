@@ -31,6 +31,14 @@ import Link from "next/link";
 
 import { Alert } from "flowbite-react";
 
+import { Spinner } from "@chakra-ui/react";
+
+import { Divider } from '@chakra-ui/react'
+
+const CustomSpinner = () => {
+  return <Spinner color="blue.500" size="xl" />;
+};
+
 export default function Buy() {
     const { contract } = useContract(NFT_COLLECTION_ADDRESS);
     const { data, isLoading } = useNFTs(contract);
@@ -118,8 +126,21 @@ const fetchSalesInfo = async () => {
   }, []);
 
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
 console.log("salesInfoList",salesInfoList)
     return (
+     
         <Container maxW={"1200px"} p={5}>
            
            
@@ -178,16 +199,10 @@ console.log("salesInfoList",salesInfoList)
                 emptyText={"No NFTs found"}
             />
 
-
-            {/* <Heading mt={14} id="dnft" className="ptext">Discover NFTs</Heading>
-            <Text className="ptext">Browse and buy NFTs from this collection.</Text>
-            <NFTGrid 
-                isLoading={isLoading} 
-                data={data} 
-                emptyText={"No NFTs found"}
-            /> */}
-           <Stack mt={20}> <Footer2  /> </Stack> 
-        {/* <BFooter /> */}
+           <Stack mt={20}> 
+           <Divider />
+           <Footer2  /> 
+           </Stack> 
         </Container>
     )
 };

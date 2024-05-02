@@ -16,6 +16,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover!important;
     overflow-x: hidden!important;
+    /* font-family: 'Michroma', sans-serif; */
 }
 
 .sellfooter{
@@ -505,7 +506,9 @@ margin-left: 2rem;
 .nftgrid ,.ptext{
   padding-left: 1rem!important;
 }
-
+.ptext{
+  padding-left: 0rem!important;
+}
 }
 
 @media (max-width:600px){
@@ -586,7 +589,7 @@ margin-left: 2rem;
 .loader{
   width: 33px;
     margin-top: 38px;
-    margin-left: 9rem;
+    margin-left: 1rem;
 }
 @media(max-width:600px){
   .salespart {
@@ -618,4 +621,24 @@ margin-left: 2rem;
 .bannerImage{
   width: 101%;
   border-radius: 10px;
+}
+
+.tw-web3button,.css-b4m5gy[disabled]{
+  color: black!important;
+  opacity: 1!important;
+}
+
+@media(min-width:600px){
+  .css-oeoyse{
+    margin-left: 0rem;
+  }
+}
+.buybtn{
+  background: #6565b5;
+    padding: 12px;
+    border-radius: 5px
+}
+
+.css-15wklsr{
+  background-color: #110665!important;
 }

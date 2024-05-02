@@ -48,7 +48,7 @@ export default function SplitScreen() {
         </div>
       </div>
     </div> */}
-    <img src="https://itishstudios.net/assert/BOOTH.png" className='bannerImage' alt="" />
+    <img src="https://itishstudios.net/assert/marketplaceop.png" className='bannerImage' alt="" />
     </>
   )
 }

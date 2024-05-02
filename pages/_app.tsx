@@ -16,6 +16,9 @@ import React from "react";
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 // const activeChain = "ethereum";
 
+import { Divider } from '@chakra-ui/react'
+
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -25,6 +28,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     >
       <ChakraProvider>
         <Navbar1 />
+        <br />
+        <Divider />
+        <br />
+        <br />
         <Component {...pageProps} />
         {/* <Footer />
         <BFooter /> */}
