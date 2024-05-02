@@ -47,6 +47,8 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
   const address = useAddress();
   const toast = useToast()
 
+  const [Loading, setLoading] = useState<any>();
+
   const { seller, token, tokenId, amountOfToken, deadline, price, isSold } =
     router.query;
 
@@ -77,6 +79,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
         })
         return;
       }
+      setLoading(true)
       const as = 1;
       console.log("tokenId :", tokenId);
 
@@ -85,6 +88,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
       });
 
       // Handle the result of the transaction as needed
+      setLoading(false)
       console.log("Transaction result:", result);
       toast({
         // position: 'bottom-center',
@@ -97,6 +101,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     } catch (error) {
       // Handle any errors that occur during the transaction
       console.error("Error while buying listing:", error);
+      setLoading(false)
       toast({
         // position: 'bottom-center',
         render: () => (
@@ -212,7 +217,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             <Text fontSize={"small"}>{isSold}</Text>
           </Stack>
 
-          <button onClick={buyListing} className="buybtn">Buy</button>
+          <button onClick={buyListing} className="buybtn">{Loading?"Loading...":"Buy"}</button>
         </Stack>
       </SimpleGrid>
     </Container>
